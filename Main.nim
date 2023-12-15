@@ -50,6 +50,7 @@ proc DeleteNodeFromDoubleLinkedList(processHandle: HANDLE, dllEntry: Structs.PLD
         echo "[!] Error on writing pointers!"
         quit(0)
 
+
 proc HideDLLFromUserSpace(): void = 
     if(paramCount() != 2):
         PrintHelp()
@@ -76,7 +77,7 @@ proc HideDLLFromUserSpace(): void =
     var selectedDLLEntry: Structs.LDR_DATA_TABLE_ENTRY
     var cursorForListEntries: PLIST_ENTRY = loaderData.InLoadOrderModuleList.Flink
     var headForListEntries: PLIST_ENTRY =  cast[PLISTENTRY](cast[uint64](pebStruct.Ldr) + cast[uint64](sizeof(ULONG)) + cast[uint64](4) + cast[uint64](sizeof(PVOID)))
-    var tempArrayForUnicode:array[32, uint16]
+    var tempArrayForUnicode:array[64, uint16]
     var dllFound: bool = false
     echo "[+] List of currently loaded modules: "
     while true:
