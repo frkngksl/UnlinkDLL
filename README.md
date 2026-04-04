@@ -64,3 +64,7 @@ PS C:\Users\Public> .\UnlinkDLL.exe 11872 MaliciousInjectedDll.dll
 
 - https://blog.christophetd.fr/dll-unlinking/
 - http://www.rohitab.com/discuss/topic/41944-module-pebldr-hiding-all-4-methods/
+
+## Disclaimer
+
+For authorized security testing only. Misuse of this tool against systems without explicit permission is illegal.
